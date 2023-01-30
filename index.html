@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Connect4</title>
+</head>
+
+<body>
+    <!-- MENU -->
+    <div id="menu-cont">
+        
+        <div class="dots-img">
+            <div class="red-dots-img"> </div>
+            <div class="yellow-dots-img"></div>
+            <div class="yellow-dots-img"></div>
+            <div class="red-dots-img"></div>
+        </div>
+
+        <button class="menu-btns vs-cpu-btn" id="vs-cpu-btn">
+            <span>PLAY VS CPU</span>
+            <div class="menu-btns-emoji">
+                <span class="emoji emoji1">:|</span>
+                <span class="emoji emoji2">:)</span>
+            </div>
+        </button>
+        
+        <button class="menu-btns vs-player-btn" id="vs-player-btn">
+            <span>PLAY VS PLAYER</span>
+            <div class="menu-btns-emoji">
+                <span class="emoji emoji1">&nbsp;:)&nbsp;</span>
+                <span class="emoji emoji2">&nbsp;:)&nbsp;</span>
+            </div>
+        </button>
+        
+        <button class="menu-btns rules-btn" id="rules-btn">GAME RULES</button>
+    </div>
+    
+
+    <!-- GAMERULES -->
+    <div id="gamerules-cont">
+        <h1>RULES</h1>
+        <h2>OBJECTIVE</h2>
+        <p>Be the first player to connect 4 discs of the same color in a row
+             (either vertically, horizontally or diagonally).</p>
+        <h2>HOW TO PLAY</h2>
+        <ol>
+            <li>Red goes first in the first game.</li>
+            <li>Players must alternate turns, and only one disc can be dropped
+                 in each turn.</li>
+            <li>The game ends when there is a 4-in-a-row or a stalemate.</li>
+            <li>The starter of the previous game goes second on the next game.</li>
+        </ol>
+        <button id="back-from-rules">&check;</button>
+    </div>
+    
+
+    <!-- GAMEPLAY VS COMP -->
+    <div id="gameplay-cpu-cont">
+        <header>
+            <button id="menu-cpu-btn">MENU</button>
+            <div class="dots-img">
+                <div class="red-dots-img"></div>
+                <div class="yellow-dots-img"></div>
+                <div class="yellow-dots-img"></div>
+                <div class="red-dots-img"></div>
+            </div>
+            <button id="restart-btn-vs-cpu">RESTART</button>
+        </header>
+        <p>YOU'RE TOO STRONG FOR ME... I'M RUNNING AWAY!</p>
+        <iframe src="https://giphy.com/embed/ylyUQncTbxyZcDeLao" width="240" height="240" 
+        frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+
+
+    <!-- NAMES -->
+    <div id="names-cont">
+        <div class="name-player-one">
+            <label for="red-player-name">PLAYER 1</label><br>
+            <input type="text" placeholder="WRITE YOUR NAME" class="player" id="red-player-name">
+            <span class="emoji player-one-emoji">&nbsp;:)&nbsp;</span>
+        </div>
+        <div class="name-player-two">
+            <label for="yellow-player-name">PLAYER 2</label><br>
+            <input type="text" placeholder="WRITE YOUR NAME" class="player" id="yellow-player-name">
+            <span class="emoji player-two-emoji">&nbsp;:)&nbsp;</span>
+        </div>
+        <button id="confirm-names-btn">START</button>
+    </div>
+
+    
+    <!-- GAMEPLAY VS PLAYER -->
+    <div id="gameplay-cont">
+        <header>
+            <button id="menu-btn">MENU</button>
+            <div class="dots-img">
+                <div class="red-dots-img"> </div>
+                <div class="yellow-dots-img"></div>
+                <div class="yellow-dots-img"></div>
+                <div class="red-dots-img"></div>
+            </div>
+            <button id="restart-btn">RESTART</button>
+        </header>
+        <div class="points-cont">
+            <div class="points-player-one">
+                <p class="player" id="red-player">PLAYER 1</p>
+                <p class="points" id="red-points">0</p>
+                <span class="emoji player-one-emoji">&nbsp;:)&nbsp;</span>
+            </div>
+            <div class="points-player-two">
+                <p class="player" id="yellow-player">PLAYER 2</p>
+                <p class="points" id="yellow-points">0</p> 
+                <span class="emoji player-two-emoji">&nbsp;:)&nbsp;</span>
+            </div>
+        </div>
+        <div class="board" id="board"></div>
+        <div class="status time-status" id="time-status">
+            <p class="status-player"><span id="time-status-player">PLAYER 1</span>'S TURN</p>
+            <p class="status-info"><span id="time">&nbsp;</span></p>
+        </div>
+        <div class="status win-status" id="win-status">
+            <p class="status-player" id="win-status-player">PLAYER 1</p>
+            <p class="status-info" id="win-text">WINS</p>
+            <button id="play-again-btn">PLAY AGAIN</button>
+        </div>
+        <div class="footer-background" id="footer-background"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

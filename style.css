@@ -1,0 +1,805 @@
+
+/* COLORS
+red: #fc6787
+yellow: #ffce67
+blue background: #7945ff
+darker blue: #5c2dd5
+white: #ffffff
+black: #000000
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700&display=swap');
+
+:root {
+    --color-primary-gradient:
+        linear-gradient(-162deg, transparent 35px, #fc6787 0) right,
+        linear-gradient(162deg, transparent 35px, #fc6787 0)left;
+  }
+
+*{
+    box-sizing: border-box;
+    pointer-events:visiblePainted;
+}
+
+body {
+    margin: 2em auto 0;
+    padding: 0 2rem;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #7945ff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #7945ff;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+button {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    margin: 0.25em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 130px;
+    border-radius: 3rem;
+    border: none;
+    background-color: #5c2dd5;
+    color: #fffffffa;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: #5d2dd5da;
+    border: #ffffff6e 1px solid;
+}
+
+button:active {
+    color: #5d2dd5;
+    background-color: #fffffa;
+}
+
+
+
+/* ***** */
+/* MENU */
+#menu-cont {
+    height: 75vh;
+    margin-top: 15vh;
+}
+
+#menu-cont .dots-img {
+    margin: 0 auto 3em;
+}
+
+.menu-btns {
+    width: 95%;
+    display: block;
+    font-size: 1.25rem;
+    margin: 0 auto 1em;
+    padding: 0.75em 1.5rem;
+    border: #000000 3px solid;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 0px 0px #000000;
+    max-width: 360px;
+}
+
+.menu-btns .menu-btns-emoji {
+    position: relative;
+}
+
+.vs-cpu-btn,
+.vs-player-btn {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fc6787;
+}
+
+.vs-cpu-btn {
+    background-color: #fc6787;
+}
+
+.menu-btns:hover,
+.menu-btns:focus {
+    border: 3px solid black;
+    color: #fffffa;
+    background-color: #7945ff;
+}
+
+.vs-player-btn:hover .emoji{
+    color: black;
+}
+
+#vs-player-btn .menu-btn-emoji .emoji:hover {
+    color: #000000;
+}
+
+.vs-cpu-btn:active,
+.vs-player-btn:active,
+.rules-btn:active {
+    background-color:#5d2dd5;
+}
+
+.emoji1,
+.emoji2 {
+    position: absolute;
+    border: #ffffff 3px solid;
+    line-height:1.52em;
+}
+
+.vs-cpu-btn .emoji1 {
+    background-color: #fc6787;
+    right: 0;
+    top: -0.2em;
+    padding: 0 0.6em 0 0.25em;
+}
+
+.vs-cpu-btn .emoji2 {
+    background-color: #fc6787;
+    right: 1.39em;
+    top: -0.2em;
+    padding:  0 0.4em 0 0.4em;
+}
+
+.vs-player-btn {
+    background-color: #ffce67;
+     color:#000000f5;
+}
+
+.vs-player-btn .emoji1 {
+    background-color: #ffce67;
+    border: #000000f5 3px solid;
+    right: 0;
+    top: -0.2em;
+    padding: 0 0.1em 0 0.06em;
+}
+
+.vs-player-btn .emoji2 {
+    background-color: #ffce67;
+    border: #000000f5 3px solid;
+    right: 1.39em;
+    top: -0.2em;
+    padding:  0 0.1em 0 0.1em;
+}
+
+.rules-btn {
+    background-color: #ffffff;
+    color: #5d2dd5;
+    text-align: left;
+}
+
+
+
+/* ***** */
+/* RULES */
+#gamerules-cont {
+    background-color:#fffffa;
+    width: 95%;
+    border: #000000 3px solid;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 0px 0px #000000;
+    padding: 0 2rem;
+    margin: 2em auto;
+}
+
+#gamerules-cont p,
+#gamerules-cont ol {
+    margin: 0;
+    margin-bottom: 2em;
+}
+
+#gamerules-cont li {
+    margin-bottom: 0.5em;
+}
+
+#gamerules-cont ol {
+    padding-left: 1.25em;
+}
+
+#back-from-rules {
+    display: block;
+    font-size: 2rem;
+    width: 60px;
+    padding: 0.2em 0;
+    margin: -0.3em auto 0.5em;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    background-color: #fc6787;
+    text-align: center;
+}
+
+#back-from-rules:hover,
+#back-from-rules:focus {
+
+    border: 3px solid black;
+    color: #fffffa;
+    background-color: #7945ff;
+}
+
+#back-from-rules:active {
+    background-color:#5d2dd5;
+}
+
+
+
+/* ************* */
+/* GAMEPLAY COMP*/
+#gameplay-cpu-cont {
+    display: none;
+}
+
+#gameplay-cpu-cont p{
+    width: fit-content;
+    text-align: center;
+    border: #000000 3px solid;
+    box-shadow: 0px 20px 0px 0px #000000;
+    border-radius: 25%;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000;
+    background-color: #ffce67;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+iframe {
+    display: block;
+    margin: -1em auto 1em;
+    border: #000000 3px solid;
+    box-shadow: 0px 20px 0px 0px #000000;
+    border-radius: 50%;
+}
+
+
+
+/* ***** */
+/* NAMES */
+#names-cont {
+    display: none;
+    width: 90%;
+    height: 400px;
+    flex-wrap: wrap;
+    margin: 7em auto 0;
+    justify-content: center;
+    text-align: center;
+}
+
+#names-cont label {
+    font-size: 1.5rem;
+    background-color:#5c2dd5;
+    color: #b89dff;
+    padding: 1em 1em 0.125em;
+    border-radius: 50% 50% 0 0;
+}
+
+#names-cont input {
+    border-radius: 15px;
+    border: 3px solid #000;
+    padding: 1em 3.5em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.name-player-one,
+.name-player-two {
+    position: relative;
+    margin: 0 1em;
+}
+
+#confirm-names-btn {
+    margin: -2em 4em 0;
+    padding: 1em 0 2em;
+    width: 10em;
+    height: 3rem;
+    z-index: 1;
+}
+
+#confirm-names-btn:hover,
+#confirm-names-btn:focus {
+    padding: 0.95em 0 1.95em;
+
+}
+
+
+
+/* ******** */
+/* GAMEPLAY */
+
+/* HEADER BAR */
+#gameplay-cont {
+    display: none;
+}
+
+#gamerules-cont {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.dots-img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 2.8rem;
+}
+
+.red-dots-img,
+.yellow-dots-img {
+    border: #000000 3px solid;
+    box-shadow: 0px 4px 0px 0px #000000;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 2.5px 1px;
+}
+
+.red-dots-img {
+    background-color: #fc6787;
+}
+
+.yellow-dots-img {
+    background-color: #ffce67;
+}
+
+
+/* POINTS CONTAINER */
+.points-cont {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 1em;
+    position: relative;
+}
+
+.points-player-one,
+.points-player-two {
+    border: #000000 3px solid;
+    box-shadow: 0px 10px 0px 0px #000000;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    width: 45%;
+    padding: 0.9em 0.75rem;
+    margin-bottom: 2.5em;
+}
+
+.player,
+.points {
+    font-weight: 600;
+    margin: 0;
+}
+
+.player {
+    font-size: 1.125rem;
+}
+
+.points {
+    font-size: 2.125rem;
+}
+
+.emoji {
+    border-radius: 50%;
+    position: absolute;
+    rotate: 90deg;
+}
+
+.player-one-emoji,
+.player-two-emoji {
+    margin: 2.5px 1px;
+    font-size: 2rem;
+    line-height: 3.3rem;
+    top: 0.5rem;
+    border: #000000 3px solid;
+    box-shadow: 5px 0px 0px 0px #000000;
+}
+
+.player-one-emoji {
+    background-color: #fc6787;
+    left: -2rem;
+    transform: rotateX(145deg);
+}
+
+.player-two-emoji {
+    background-color: #ffce67;
+    right: -2rem;
+    transform: rotateX(36deg);
+}
+
+
+/* BOARD */
+.board {
+        /* 50*6 + 20px */
+    height: 320px;
+        /* 50*7 */
+    width: 350px;
+    margin: 0 auto 0;
+    background-color: #fffffa;
+    border: #000000 3px solid;
+    border-radius: 1rem;
+    box-shadow: 0px 15px 0px 0px #000000;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+    z-index: 5;
+}
+
+.tile {
+    height: 41px;
+    width: 41px;
+    border-radius: 50%;
+    background-color: #7945ff;
+    border: #000000 4px solid;
+    box-shadow: inset 0px 12px 0px 0px #000000;
+    margin: 4px;
+}
+
+.yellow-piece,
+.red-piece {
+    box-shadow: inset 0px 7px 0px 0px #0000006b;
+}
+
+.yellow-piece {
+    background-color: #ffce67;
+}
+
+.red-piece {
+    background-color: #fc6787;
+}
+
+
+/* STATUS */
+.status {
+    margin: -1em auto 0em;
+    border: #000000 3px solid;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 0px 0px #000000;
+    text-align: center;
+}
+
+.status p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.status-player {
+    font-size: 1.125rem;
+}
+
+.time-status,
+.status-info {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* time status */
+.time-status {
+    display: block;
+    margin-top: 1.75rem;
+    padding: 0 0 0.9em;
+    width: 250px;
+    background-color: #fc6787;
+    color: #fffffa;
+    text-shadow: #000000 1px 1px 3px;
+    position: relative;
+    z-index: 5;
+}
+
+/* arrow up  */
+.time-status::before {
+    position: absolute;
+    content: "";
+    border: none;
+    top: -2.1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 40px;
+    width: 235px;
+    z-index: 4;
+    background: var(--color-primary-gradient,
+        linear-gradient(-162deg, transparent 35px, #fc6787 0) right,
+        linear-gradient(162deg, transparent 35px, #fc6787 0)left);
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+}
+
+/* arrow up border */
+.time-status::after {
+    position: absolute;
+    content: "";
+    border: none;
+    top: -2.3rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 40px;
+    width: 240px;
+    z-index: 3;
+    background:
+        linear-gradient(-162.5deg, transparent 35px, black 35px) right,
+        linear-gradient(162.5deg, transparent 35px, black 35px) left;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+}
+
+/* win status */
+.win-status {
+    display: none;
+    margin-top: -0.5rem;
+    width: 300px;
+    padding: 0.9rem 0;
+    background-color: #fffffa;
+    position: relative;
+    z-index: 5;
+}
+
+.win-status button {
+    width: 160px;
+}
+
+.win-status button:hover,
+.win-status button:focus {
+    border: none;
+}
+
+
+/* FOOTER BACKGROUND */
+.footer-background {
+    position: absolute;
+    margin: -10em -2rem 0;
+    border-radius: 5rem 5rem 0 0;
+    width: 100%;
+    height: 11.8rem;
+    background-color:#5c2dd5;
+    z-index: 2;
+}
+
+
+
+/* ************* */
+/* MEDIA QUERIES */
+
+/* TABLET */
+@media (min-width: 600px) {
+    body {
+        background-color: #5c2dd5;
+    }
+
+    button {
+        /* font-size: 1.25rem; */
+        align-self: center;
+    }
+
+    /* MENU */
+    #menu-cont {
+        background-color:#7945ff;
+        width: 80%;
+        min-height: 480px;
+        border: #000000 3px solid;
+        border-radius: 2rem;
+        box-shadow: 0px 10px 0px 0px #000000;
+        padding: 3em 2rem;
+        margin: 4em auto;
+    }
+
+    .menu-btns {
+        font-size: 1.5rem;
+    }
+    
+    /* DOTS */
+    .dots-img {
+        width: 3.3rem;
+    }
+    
+    .red-dots-img,
+    .yellow-dots-img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    /* VS CPU */
+    #gameplay-cpu-cont {
+        background-color: #7945ff;
+        margin: -2em;
+        height: 100vh;
+        padding: 2em;
+    }
+    
+    header{
+        max-width: 615px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #gameplay-cpu-cont p {
+        font-size: 1.5rem;
+        max-width: 600px;
+    }
+
+    /* RULES */
+    #gamerules-cont {
+        max-width: 600px;
+    }
+
+    #gamerules-cont h1 {
+       font-size: 2.75rem;
+    }
+
+    #gamerules-cont h2{
+        font-size: 1.5rem;
+    }
+
+    /* NAMES */
+    #names-cont {
+        background-color: #7945ff;
+        max-width: 600px;
+        border: #000000 3px solid;
+        border-radius: 2rem;
+        box-shadow: 0px 10px 0px 0px #000000;
+        padding-top: 4em;
+    }
+
+    /* VS PLAYER */
+    #gameplay-cont {
+        background-color: #7945ff;
+        margin: -2em;
+        padding: 2em;
+    }
+
+    header {    
+        margin-bottom: 1em;
+    }
+
+    .points-cont {
+        max-width: 580px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .points-player-one,
+    .points-player-two {
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .points-player-two {
+        flex-direction: row-reverse;
+    }
+
+    .player,
+    .status-player {
+        font-size: 1.25rem;
+    }
+
+    .points,
+    .status-info {
+        font-size: 4rem;
+    }
+
+    #gameplay-cont .player-one-emoji,
+    #gameplay-cont .player-two-emoji {
+        margin: 2.5px 1px;
+        font-size: 2.8rem;
+        line-height: 4.4rem;
+        top: 0rem;
+        border: #000000 3px solid;
+        box-shadow: 5px 0px 0px 0px #000000;
+    }
+
+    .board {
+        /* 70*6 + 20px*/
+        height: 440px;
+        /* 70*7 */
+        width: 490px;
+    }
+
+    .tile {
+        height: 61px;
+        width: 61px;
+    }
+
+    .footer-background {
+        margin: -12em -2em 0;
+        height: 14rem;
+        border-radius: 3rem 3rem 0 0;
+    }
+}
+
+
+/* DESKTOP */
+@media(min-width: 800px) {
+
+    /* MENU */
+    #menu-cont  {
+        font-weight: 600;
+        max-width: 615px;
+        min-height: 500px;
+    }
+
+    #menu-cont button {
+        font-weight: 600;
+        max-width: 584px;
+        font-size: 1.65rem;
+    }
+
+    /* RULES */
+    #gamerules-cont p,
+    #gamerules-cont li {
+        font-size: 1.125rem;
+    }
+     
+    #back-from-rules {
+        font-size: 2.25rem;
+        width: 70px;
+    }
+
+    /* NAMES */
+    #names-cont label{
+        font-size: 1.7rem;
+    }
+
+    #names-cont input{
+        font-size: 1.25rem;
+    }
+
+    /* VS PLAYER */
+    .points-player-one,
+    .points-player-two {
+        position: absolute;
+        top: 115px;
+        max-width: 150px;
+        flex-direction: column;
+        padding: 2.25rem 0 1rem 0;
+    }
+
+    .points-player-one {
+        left: -100px;
+    }
+
+    .points-player-two {
+        right: -100px;
+    }
+
+    #gameplay-cont .player-one-emoji,
+    #gameplay-cont .player-two-emoji {
+        top: -3.5rem;
+    }
+
+    #gameplay-cont .player-one-emoji {
+        left: 2.5rem;
+    }
+
+    #gameplay-cont .player-two-emoji {
+        right: 2.5rem;
+    }
+
+    .board {
+        /* 60*6 + 20px*/
+        height: 380px;
+        /* 60*7 */
+        width: 420px;
+    }
+
+    .tile {
+        height: 51px;
+        width: 51px;
+    }
+
+    .footer-background {
+        margin: -12em -2em 0;
+        height: 17.7rem;
+        border-radius: 3rem 3rem 0 0;
+    }
+}
