@@ -494,6 +494,10 @@ header {
     z-index: 5;
 }
 
+#time-status-player {
+    z-index: 5;
+}    
+
 /* arrow up  */
 .time-status::before {
     position: absolute;
