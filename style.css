@@ -494,8 +494,8 @@ header {
     z-index: 5;
 }
 
-#time-status-player {
-    z-index: 5;
+#time-status .status-player {
+    z-index: 6;
 }    
 
 /* arrow up  */
