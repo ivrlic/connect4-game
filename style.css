@@ -495,7 +495,7 @@ header {
 }
 
 #time-status .status-player {
-    z-index: 6;
+    padding-top: 0.3em;
 }    
 
 /* arrow up  */
