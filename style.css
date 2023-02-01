@@ -492,11 +492,7 @@ header {
     text-shadow: #000000 1px 1px 3px;
     position: relative;
     z-index: 5;
-}
-
-#time-status .status-player {
-    margin-top: 0.5em;
-}    
+}   
 
 /* arrow up  */
 .time-status::before {
